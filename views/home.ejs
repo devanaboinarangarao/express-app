@@ -1,0 +1,22 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/header.ejs') %>
+    <div class="container">
+        <div class="table">
+            <table>
+                <thead>
+                    <tr><th>Name</th><th>Email</th><th>Phone</th><th></th></tr> 
+                </thead>
+                <tbody>
+                    <% for(let user of Users) {%>
+                    <tr>
+                        <td><%= user.name %></td>
+                        <td><%= user.email %></td>
+                        <td><%= user.phone %></td>
+                        <td><input class="btn" type="button" value="delete" onclick="getFun('<%= user.email %>')"></td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<%- include('includes/footer.ejs') %>

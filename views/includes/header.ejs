@@ -1,0 +1,19 @@
+<header class="header">
+    <h1 class="title">CRUD</h1>
+    <nav>
+        <ul class="list">
+            <% if (isLogged) { %>
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+                <% } else { %>
+                    <li>
+                        <a href="/updateUser">Update</a>
+                    </li>
+                    <li>
+                        <a href="/deleteUser">Delete</a>
+                    </li>
+                    <% } %>
+        </ul>
+    </nav>
+</header>
